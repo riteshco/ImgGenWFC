@@ -5,11 +5,10 @@ import random
 
 pygame.init()
 
-DIM = 60
-TILE_SIZE = 10
+DIM = 50
+TILE_SIZE = 18
 SCREEN_SIZE = DIM * TILE_SIZE
 N = 3 
-ROWS , COLS = 9 , 9
 
 screen_width, screen_height = SCREEN_SIZE , SCREEN_SIZE
 
@@ -19,7 +18,8 @@ clock = pygame.time.Clock()
 font = pygame.font.SysFont("Arial", 12, bold=True)
 small_font = pygame.font.SysFont("Arial", 18)
 
-image = pygame.image.load("./samples/City.png")
+image = pygame.image.load("./samples/Cats.png")
+ROWS , COLS = image.get_height() , image.get_width()
 
 tiles = utils.split_image(image , ROWS , COLS)
 
